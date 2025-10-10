@@ -1,3 +1,7 @@
+$bp-sm: 488px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+
 .catalog {
   --card-column: 1;
 
@@ -7,15 +11,16 @@
   gap: $gap-y $gap-x;
   justify-content: center;
 
-  @media (min-width: 488px) {
+  // Responsividade usando variáveis
+  @media (min-width: $bp-sm) {
     --card-column: 2;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $bp-md) {
     --card-column: 3;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $bp-lg) {
     --card-column: 4;
   }
 }

@@ -1,21 +1,25 @@
+$star-bg: '../images/star.svg';
+$star-active-bg: '../images/star-active.svg';
+
 .stars {
   display: flex;
 
   &__star {
-    width: 16px;
-    height: 16px;
-    background-image: url(../images/star.svg);
+    width: $star-size; // largura via variável
+    height: $star-size; // altura via variável
+    background-image: url($star-bg);
     background-repeat: no-repeat;
     background-position: center;
 
     &:not(:first-child) {
-      margin-left: 4px;
+      margin-left: $star-gap; // gap entre estrelas via variável
     }
   }
 }
 
+// Ativa estrelas de 1 a 5
 @for $i from 1 through 5 {
   .stars--#{$i} .stars__star:nth-child(-n + #{$i}) {
-    background-image: url(../images/star-active.svg);
+    background-image: url($star-active-bg);
   }
 }
