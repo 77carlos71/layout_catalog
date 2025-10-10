@@ -1,0 +1,21 @@
+// Variables
+$main-text-color: #060b35;
+$second-text-color: #616070;
+$prime-color: #00acdc;
+$main-bg-color: #fff;
+$card-width: 200px;
+$hover-duration: 300ms;
+$hover-card-text-color: #34568b;
+$padding-v: 50px;
+$padding-h: 40px;
+$gap-x: 48px;
+$gap-y: 46px;
+
+// Mixins
+@mixin hover {
+  transition: all $hover-duration ease;
+
+  &:hover {
+    @content;
+  }
+}
